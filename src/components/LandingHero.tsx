@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowRight, Edit3, Folder, Palette, Star } from 'lucide-react';
+import { ArrowRight, Edit3, Folder, Star } from 'lucide-react';
 import Link from 'next/link';
 
 export function LandingHero() {
