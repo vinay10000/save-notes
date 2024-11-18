@@ -13,7 +13,6 @@ interface CustomEditorProps {
 
 export function CustomEditor({ value, onChange, placeholder, className = '' }: CustomEditorProps) {
   const editorRef = useRef<HTMLDivElement>(null);
-  const [isFocused, setIsFocused] = useState(false);
   const [formatState, setFormatState] = useState<Record<string, boolean>>({});
   const isInternalChange = useRef(false);
   
@@ -124,8 +123,6 @@ export function CustomEditor({ value, onChange, placeholder, className = '' }: C
         ref={editorRef}
         contentEditable
         onInput={handleInput}
-        onFocus={() => setIsFocused(true)}
-        onBlur={() => setIsFocused(false)}
         className={cn(
           'flex-1 outline-none overflow-auto px-4 py-2',
           'prose prose-sm sm:prose-base max-w-none prose-neutral dark:prose-invert',
