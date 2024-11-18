@@ -16,7 +16,7 @@ export function CustomEditor({ value, onChange, placeholder, className = '' }: C
   const [isFocused, setIsFocused] = useState(false);
   const [formatState, setFormatState] = useState<Record<string, boolean>>({});
   const isInternalChange = useRef(false);
-
+  
   // Update format state on selection change
   useEffect(() => {
     const updateFormatState = () => {
@@ -105,7 +105,7 @@ export function CustomEditor({ value, onChange, placeholder, className = '' }: C
     }
   };
 
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
+  const handleKeyDown = () => {
     // Add your keydown event handling logic here
   };
 

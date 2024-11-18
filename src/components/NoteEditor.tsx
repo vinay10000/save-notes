@@ -5,7 +5,6 @@ import { useNoteStore } from '../store/useNoteStore';
 import { CustomEditor } from './CustomEditor';
 import {Smile, FileText } from 'lucide-react';
 import { NoteTemplates } from './NoteTemplates';
-import cn from 'classnames';
 import type { Note } from '../store/useNoteStore';
 
 interface NoteEditorProps {
@@ -112,10 +111,7 @@ export function NoteEditor({ note }: NoteEditorProps) {
     });
   };
 
-  const handleRemoveTag = (tagToRemove: string) => {
-    if (!note) return;
-    removeTag(note.id, tagToRemove);
-  };
+  
 
   const handleTagKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter' && newTag.trim() && note) {
